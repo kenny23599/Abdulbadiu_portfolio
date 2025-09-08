@@ -7,12 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">ABB-tech Hub</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <header class="hero">
-    <h1>Abdulbadiu Bakare</h1>
+    <h1>ABB-Tech Hub</h1>
     <p>AI-Powered Web Developer | Data Analyst | Machine Learning Enthusiast</p>
-    <a href="#projects" class="btn">View My Work</a>
-    <a href="#contact" class="btn btn-outline">Hire Me</a>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Hire Me</a>
+      <a href="cv.pdf" class="btn btn-download" download>Download CV</a>
+    </div>
   </header>
 
   <!-- About Section -->
@@ -28,49 +45,76 @@
   <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li><strong>Web Development:</strong> HTML, CSS, JavaScript, React, Node.js</li>
-      <li><strong>Data Analytics:</strong> Python, Pandas, Matplotlib, SQL, Power BI</li>
-      <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow, NLP, Time Series</li>
-      <li><strong>AI Tools:</strong> OpenAI API, Git, Docker</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-card">Web Development: HTML, CSS, JavaScript, React, Node.js</div>
+      <div class="skill-card">Data Analytics: Python, Pandas, Matplotlib, SQL, Power BI</div>
+      <div class="skill-card">Machine Learning: Scikit-learn, TensorFlow, NLP, Time Series</div>
+      <div class="skill-card">AI Tools: OpenAI API, Git, Docker</div>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>SmartNote AI</h3>
-      <p>An AI-powered note-taking app that summarizes and structures notes.</p>
-      <p><strong>Tech:</strong> React, Node.js, OpenAI API</p>
-    </div>
-    <div class="project">
-      <h3>Insurance Premium Prediction</h3>
-      <p>Built a machine learning model to predict insurance costs based on user data.</p>
-      <p><strong>Tech:</strong> Python, Scikit-learn</p>
-    </div>
-    <div class="project">
-      <h3>Real Estate Dashboard</h3>
-      <p>Designed an interactive dashboard to visualize property sales trends.</p>
-      <p><strong>Tech:</strong> Python, Tableau / Power BI</p>
-    </div>
-    <div class="project">
-      <h3>Energy-Efficient Building Model</h3>
-      <p>Regression model to estimate heating load for sustainable architecture.</p>
-      <p><strong>Tech:</strong> Python, Linear Regression</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>SmartNote AI</h3>
+        <p>An AI-powered note-taking app that summarizes and structures notes.</p>
+        <p><strong>Tech:</strong> React, Node.js, OpenAI API</p>
+      </div>
+      <div class="project-card">
+        <h3>Insurance Premium Prediction</h3>
+        <p>Machine learning model to predict insurance costs based on user data.</p>
+        <p><strong>Tech:</strong> Python, Scikit-learn</p>
+      </div>
+      <div class="project-card">
+        <h3>Real Estate Dashboard</h3>
+        <p>Interactive dashboard to visualize property sales trends.</p>
+        <p><strong>Tech:</strong> Python, Tableau / Power BI</p>
+      </div>
+      <div class="project-card">
+        <h3>Energy-Efficient Building Model</h3>
+        <p>Regression model to estimate heating load for sustainable architecture.</p>
+        <p><strong>Tech:</strong> Python, Linear Regression</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:abdulbadiubakare12345@gmail.com">abdulbadiubakare12345@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/bakare-abdulbadiu-b96350236/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BLHt%2BZac1TdC7MdGbQeZrkA%3D%3D" target="_blank">linkedin.com/in/bakare-abdulbadiu</a></p>
-    <p>GitHub: <a href="https://github.com/kenny23599" target="_blank">github.com/kenny23599</a></p>
+    <div class="contact-icons">
+      <a href="mailto:abdulbadiubakare12345@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/bakare-abdulbadiu-b96350236/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BLHt%2BZac1TdC7MdGbQeZrkA%3D%3D" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/kenny23599"  target="_blank" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 Abdulbadiu Bakare. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+        // Close menu on mobile after clicking
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
