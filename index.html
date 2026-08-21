@@ -3,118 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulbadiu Bakare | Portfolio</title>
+  <meta name="description" content="Abdulbadiu Bakare — Computer Science developer portfolio. Web development, data analytics, artificial intelligence and machine learning.">
+  <title>Abdulbadiu Bakare | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">ABB-tech Hub</div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="navbar" id="navbar">
+    <a class="logo" href="#home" aria-label="ABB-Tech Hub home"><span>ABB</span><b>Tech</b></a>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-link active" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#skills">Skills</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
-      ☰
-    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>ABB-Tech Hub</h1>
-    <p>AI-Powered Web Developer | Data Analyst | Machine Learning Enthusiast</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="#contact" class="btn btn-outline">Hire Me</a>
-      <a href="cv.pdf" class="btn btn-download" download>Download CV</a>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate developer with expertise in Web Development, Data Analytics, 
-      and Artificial Intelligence. I build intelligent, data-driven applications 
-      and modern web solutions that help businesses grow.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Web Development: HTML, CSS, JavaScript, React, Node.js</div>
-      <div class="skill-card">Data Analytics: Python, Pandas, Matplotlib, SQL, Power BI</div>
-      <div class="skill-card">Machine Learning: Scikit-learn, TensorFlow, NLP, Time Series</div>
-      <div class="skill-card">AI Tools: OpenAI API, Git, Docker</div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>SmartNote AI</h3>
-        <p>An AI-powered note-taking app that summarizes and structures notes.</p>
-        <p><strong>Tech:</strong> React, Node.js, OpenAI API</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Available for opportunities</p>
+        <h1>Building <span>useful digital solutions</span> with code, data & AI.</h1>
+        <p class="hero-text">
+          I'm Abdulbadiu Bakare, a Computer Science developer focused on web development,
+          data analytics, artificial intelligence and machine learning.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Explore My Work <span>↗</span></a>
+          <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+          <a href="cv.pdf" class="btn btn-dark" download>Download CV ↓</a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/kenny23599" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/bakare-abdulbadiu-b96350236/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:abdulbadiubakare12345@gmail.com">Email ↗</a>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Insurance Premium Prediction</h3>
-        <p>Machine learning model to predict insurance costs based on user data.</p>
-        <p><strong>Tech:</strong> Python, Scikit-learn</p>
-      </div>
-      <div class="project-card">
-        <h3>Real Estate Dashboard</h3>
-        <p>Interactive dashboard to visualize property sales trends.</p>
-        <p><strong>Tech:</strong> Python, Tableau / Power BI</p>
-      </div>
-      <div class="project-card">
-        <h3>Energy-Efficient Building Model</h3>
-        <p>Regression model to estimate heating load for sustainable architecture.</p>
-        <p><strong>Tech:</strong> Python, Linear Regression</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-icons">
-      <a href="mailto:abdulbadiubakare12345@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/bakare-abdulbadiu-b96350236/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BLHt%2BZac1TdC7MdGbQeZrkA%3D%3D" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/kenny23599"  target="_blank" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
-    </div>
-  </section>
+      <div class="hero-card reveal delay-1" aria-label="Portfolio highlights">
+        <div class="code-window">
+          <div class="window-bar"><span></span><span></span><span></span><small>developer.js</small></div>
+          <pre><code><i>const</i> developer = {
+  name: <em>"Abdulbadiu Bakare"</em>,
+  focus: [
+    <em>"Web Development"</em>,
+    <em>"Data Analytics"</em>,
+    <em>"AI / Machine Learning"</em>
+  ],
+  mindset: <em>"Build. Learn. Improve."</em>
+};</code></pre>
+        </div>
+        <div class="floating-badge badge-one">Python</div>
+        <div class="floating-badge badge-two">React</div>
+        <div class="floating-badge badge-three">AI / ML</div>
+      </div>
+    </section>
+
+    <section class="stats reveal">
+      <div><strong>01</strong><span>Developer mindset</span></div>
+      <div><strong>03+</strong><span>Core technology areas</span></div>
+      <div><strong>04</strong><span>Featured projects</span></div>
+      <div><strong>∞</strong><span>Curiosity to build</span></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 — About</p>
+        <h2>Turning ideas into <span>working products.</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">I build intelligent, data-driven applications and modern web solutions that solve practical problems.</p>
+          <p>
+            My interests sit at the intersection of software development, analytics and artificial intelligence.
+            I enjoy taking a problem from an idea, through implementation and testing, to a usable digital product.
+          </p>
+          <p>
+            I’m continuously improving my technical skills through projects, experimentation and real-world problem solving.
+          </p>
+        </div>
+        <div class="about-panel reveal delay-1">
+          <div class="mini-item"><span>01</span><div><b>Build</b><small>Clean, responsive digital experiences</small></div></div>
+          <div class="mini-item"><span>02</span><div><b>Analyze</b><small>Turn data into useful insights</small></div></div>
+          <div class="mini-item"><span>03</span><div><b>Learn</b><small>Explore modern AI & ML techniques</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 — Skills</p>
+        <h2>A practical <span>technical toolkit.</span></h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon">&lt;/&gt;</div><h3>Web Development</h3><p>Building responsive interfaces and web applications.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span></div></article>
+        <article class="skill-card reveal delay-1"><div class="skill-icon">⌘</div><h3>Data Analytics</h3><p>Exploring, cleaning and visualizing data to uncover patterns.</p><div class="tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>SQL</span><span>Power BI</span></div></article>
+        <article class="skill-card reveal delay-2"><div class="skill-icon">◈</div><h3>Machine Learning</h3><p>Developing predictive models and experimenting with AI techniques.</p><div class="tags"><span>Scikit-learn</span><span>TensorFlow</span><span>NLP</span><span>Time Series</span></div></article>
+        <article class="skill-card reveal delay-3"><div class="skill-icon">AI</div><h3>AI & Tools</h3><p>Using modern developer and AI tooling to accelerate product development.</p><div class="tags"><span>OpenAI API</span><span>Git</span><span>Docker</span></div></article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading projects-heading reveal">
+        <div><p class="eyebrow">03 — Selected Work</p><h2>Projects that show <span>how I think.</span></h2></div>
+        <p class="heading-note">A selection of software, analytics and machine-learning work.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-top"><span class="project-number">01</span><span class="project-type">AI / Web</span></div>
+          <div class="project-visual visual-ai"><div class="visual-orb"></div><span>SMART<br>NOTE</span></div>
+          <div class="project-content"><h3>SmartNote AI</h3><p>An AI-powered note-taking application designed to summarize and structure notes.</p><div class="tags"><span>React</span><span>Node.js</span><span>OpenAI API</span></div></div>
+        </article>
+        <article class="project-card reveal delay-1">
+          <div class="project-top"><span class="project-number">02</span><span class="project-type">Machine Learning</span></div>
+          <div class="project-visual visual-ml"><div class="chart"><i></i><i></i><i></i><i></i><i></i></div><span>PREDICT</span></div>
+          <div class="project-content"><h3>Insurance Premium Prediction</h3><p>A machine-learning model that predicts insurance costs from user data.</p><div class="tags"><span>Python</span><span>Scikit-learn</span></div></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-top"><span class="project-number">03</span><span class="project-type">Data Analytics</span></div>
+          <div class="project-visual visual-data"><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><span>INSIGHTS</span></div>
+          <div class="project-content"><h3>Real Estate Dashboard</h3><p>Interactive visualization of property sales trends for easier analysis.</p><div class="tags"><span>Python</span><span>Power BI</span><span>Tableau</span></div></div>
+        </article>
+        <article class="project-card reveal delay-1">
+          <div class="project-top"><span class="project-number">04</span><span class="project-type">Machine Learning</span></div>
+          <div class="project-visual visual-energy"><div class="pulse"></div><span>ENERGY</span></div>
+          <div class="project-content"><h3>Energy-Efficient Building Model</h3><p>A regression model for estimating heating load in sustainable building analysis.</p><div class="tags"><span>Python</span><span>Linear Regression</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <p class="eyebrow">04 — Let's build</p>
+      <h2>Have an idea, project or opportunity?</h2>
+      <p>I'm open to meaningful collaborations, development opportunities and interesting technical challenges.</p>
+      <a href="mailto:abdulbadiubakare12345@gmail.com" class="btn btn-primary">Start a Conversation ↗</a>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 — Contact</p>
+        <h2>Let's <span>connect.</span></h2>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:abdulbadiubakare12345@gmail.com" class="contact-card reveal"><span class="contact-icon">@</span><div><small>Email</small><b>abdulbadiubakare12345@gmail.com</b></div><span>↗</span></a>
+        <a href="https://www.linkedin.com/in/bakare-abdulbadiu-b96350236/" target="_blank" rel="noopener" class="contact-card reveal delay-1"><span class="contact-icon">in</span><div><small>LinkedIn</small><b>bakare-abdulbadiu</b></div><span>↗</span></a>
+        <a href="https://github.com/kenny23599" target="_blank" rel="noopener" class="contact-card reveal delay-2"><span class="contact-icon">⌘</span><div><small>GitHub</small><b>kenny23599</b></div><span>↗</span></a>
+        <a href="tel:+2347014380448" class="contact-card reveal delay-3"><span class="contact-icon">☎</span><div><small>Phone</small><b>+234 701 438 0448</b></div><span>↗</span></a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Abdulbadiu Bakare. All rights reserved.</p>
+    <div class="footer-inner"><a class="logo" href="#home"><span>ABB</span><b>Tech</b></a><p>© <span id="year"></span> Abdulbadiu Bakare. Built with code & curiosity.</p><div><a href="#home">Back to top ↑</a></div></div>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        });
-        // Close menu on mobile after clicking
-        document.getElementById("navLinks").classList.remove("active");
-      });
-    });
-
-    // Hamburger menu toggle
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
